@@ -247,7 +247,7 @@ export default function Home() {
             wordBreak: 'keep-all', maxWidth: 480,
           }}>
             대표가 직접 상담하고, 직접 시공하며, 끝까지 책임집니다.<br />
-            <span style={{ color: '#111', fontWeight: 700 }}>광고보다 실력, 말보다 결과</span>를 중요하게 생각합니다.
+            <span style={{ color: '#111', fontWeight: 700, fontSize: '1.1rem' }}>광고보다 실력, 말보다 결과</span>를 중요하게 생각합니다.
           </p>
           <a href="#experts" style={{
             background: RED, color: WHITE,
