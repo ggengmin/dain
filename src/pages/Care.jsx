@@ -171,12 +171,12 @@ export default function Care() {
             {/* 후기 입력 */}
             <div style={{ marginBottom: 16 }}>
               <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 700, marginBottom: 8, color: '#222' }}>
-                정성 어린 한 줄 후기
+                정성 어린 후기
               </label>
               <textarea
                 value={reviewText}
                 onChange={(e) => setReviewText(e.target.value)}
-                placeholder="시공 후 느낌을 자유롭게 남겨주세요 :)"
+                placeholder="다인을 통해 전문가와 함께하셨다면,후기로 경험을 나눠주세요. 고객님의 이야기는 다음 고객의 기준이 되고, 전문가에게는 가장 큰 응원이 됩니다."
                 rows={4}
                 style={{
                   width: '100%', padding: '13px 14px',

@@ -29,10 +29,10 @@ export default function CareCertificate({ data }) {
       aria-label="다인 안심케어 인증서"
     >
       {/* 배경 */}
-      <rect width="560" height="580" fill="#FDFCF8" rx="14"/>
+      <rect width="560" height="620" fill="#FDFCF8" rx="14"/>
       {/* 이중 테두리 */}
-      <rect x="12" y="12" width="536" height="556" fill="none" stroke="#A8232A" strokeWidth="2" rx="10"/>
-      <rect x="19" y="19" width="522" height="542" fill="none" stroke="#A8232A" strokeWidth="0.6" rx="7"/>
+      <rect x="12" y="12" width="536" height="596" fill="none" stroke="#A8232A" strokeWidth="2" rx="10"/>
+      <rect x="19" y="19" width="522" height="582" fill="none" stroke="#A8232A" strokeWidth="0.6" rx="7"/>
 
       {/* 제목 - DAIN PARTNERS 제거, 상단 여백 줄임 */}
       <text x="280" y="76" fontSize="26" fill="#111" fontWeight="700"

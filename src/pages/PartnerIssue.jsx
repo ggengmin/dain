@@ -2,7 +2,7 @@ import { useState, useRef } from 'react'
 import { db, storage } from '../firebase'
 import { collection, addDoc, Timestamp } from 'firebase/firestore'
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage'
-import { careConfig, partnerNames } from '../data/careConfig'
+import { careConfig } from '../data/careConfig'
 
 const RED  = '#A8232A'
 const BG   = '#F5F4F0'
@@ -42,7 +42,7 @@ export default function PartnerIssue() {
       const id         = generateId()
       const certNo     = `DAIN-${new Date().getFullYear()}-${id}`
       const config     = careConfig[category]
-      const partnerName = partnerNames[category] || ''
+      const partnerName = config.partner || ''
 
       // 1. Storage에 사진 업로드
       const photoUrls = await Promise.all(
@@ -58,6 +58,7 @@ export default function PartnerIssue() {
         id:           certNo,
         category,
         partnerName,
+        ownerName: config.ownerName ?? '',
         carePeriod:   config.carePeriod,
         careType:     config.careType,
         photos:       photoUrls,
