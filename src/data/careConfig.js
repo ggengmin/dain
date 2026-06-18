@@ -46,9 +46,9 @@ export const careConfig = {
     category:   '입주청소',
     partner:    '스펙터클린',
     ownerName:  '공민재',
-    carePeriod: '불만족 시 재서비스 보장',
+    carePeriod: '시공 완료일로부터 3일',
     careType:   'service',
-    // 특이사항 없음
+    careDescription: '안지워지는 부분에 대해서는 AS 불가',
   },
 }
 
