@@ -21,7 +21,7 @@ export default function CareCertificate({ data }) {
 
   return (
     <svg
-      viewBox="0 0 560 580"
+      viewBox="0 0 560 620"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       style={{ width: '100%', maxWidth: 560, fontFamily: "'Noto Serif KR', Georgia, serif" }}
@@ -99,32 +99,39 @@ export default function CareCertificate({ data }) {
         fontFamily="'Pretendard',sans-serif" letterSpacing="1">안심케어기간</text>
       <text x="498" y="442" fontSize="12.5" fill="#A8232A" fontWeight="700"
         textAnchor="end">{carePeriod}</text>
+      {/* careDescription 특이사항 - 있을 때만 표시 */}
+      {data.careDescription && (
+        <>
+          <line x1="42" y1="472" x2="518" y2="472" stroke="#F0EAE0" strokeWidth="0.8"/>
+          <text x="62" y="492" fontSize="8.5" fill="#AAA"
+            fontFamily="'Pretendard',sans-serif" letterSpacing="1">특 이 사 항</text>
+          <text x="498" y="492" fontSize="9" fill="#888"
+            textAnchor="end" fontFamily="'Pretendard',sans-serif">
+            ※ {data.careDescription}
+          </text>
+        </>
+      )}
 
-      {/* 굵은 구분선 */}
-      <line x1="42" y1="462" x2="518" y2="462" stroke="#E8E2D8" strokeWidth="1"/>
+      {/* 굵은 구분선 - y값 올림 */}
+      <line x1="42" y1="510" x2="518" y2="510" stroke="#E8E2D8" strokeWidth="1"/>
 
-      {/* 발급기관 텍스트 */}
-      <text x="62" y="494" fontSize="13" fill="#111" fontWeight="700">다인 파트너스</text>
-      <text x="62" y="512" fontSize="10" fill="#999"
-        fontFamily="'Pretendard',sans-serif">부울경 홈케어 전문가 협동 연대</text>
+      {/* 발급기관 */}
+      <text x="62" y="542" fontSize="13" fill="#111" fontWeight="700">다인 파트너스</text>
+      <text x="62" y="560" fontSize="10" fill="#999" fontFamily="'Pretendard',sans-serif">
+        믿을 수 있는 전문가와 고객을 연결합니다
+      </text>
 
-      {/* 직인 - 로고 이미지 */}
-      <image
-        href="/logo.png"
-        x="418"
-        y="458"
-        width="82"
-        height="82"
-        preserveAspectRatio="xMidYMid meet"
-      />
+      {/* 직인 */}
+      <image href="/logo.png" x="418" y="506" width="82" height="82"
+        preserveAspectRatio="xMidYMid meet" />
 
       {/* 면책 문구 */}
-      <line x1="42" y1="530" x2="518" y2="530" stroke="#EEE8DF" strokeWidth="0.8"/>
-      <text x="280" y="548" fontSize="8.5" fill="#C8C0B4" textAnchor="middle"
+      <line x1="42" y1="578" x2="518" y2="578" stroke="#EEE8DF" strokeWidth="0.8"/>
+      <text x="280" y="596" fontSize="8.5" fill="#C8C0B4" textAnchor="middle"
         fontFamily="'Pretendard',sans-serif">
         본 인증서는 다인 파트너스의 검증 시스템에 의거하여 발행되었으며, 실질적인 시공 책임 및 안심케어 서비스는
       </text>
-      <text x="280" y="563" fontSize="8.5" fill="#C8C0B4" textAnchor="middle"
+      <text x="280" y="611" fontSize="8.5" fill="#C8C0B4" textAnchor="middle"
         fontFamily="'Pretendard',sans-serif">
         {disclaimerName}에서 전담하여 정성껏 이행합니다.
       </text>
