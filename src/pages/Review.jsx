@@ -15,6 +15,8 @@ function formatDate(timestamp) {
 
 // ── 모달 ──────────────────────────────────────────────────────
 function ReviewModal({ item, onClose }) {
+  const [photoIdx, setPhotoIdx] = useState(0)  // 상단에 추가
+  const photos = item.photos || []
   useEffect(() => {
     document.body.style.overflow = 'hidden'
     return () => { document.body.style.overflow = '' }
@@ -41,19 +43,37 @@ function ReviewModal({ item, onClose }) {
         }}
       >
         {/* 사진 */}
-        {item.photos?.length > 0 && (
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: item.photos.length === 1 ? '1fr'
-              : item.photos.length === 2 ? '1fr 1fr' : '1fr 1fr 1fr',
-            gap: 2,
-          }}>
-            {item.photos.map((url, i) => (
-              <div key={i} style={{ aspectRatio: '1', overflow: 'hidden', background: '#EAE8E2' }}>
-                <img src={url} alt={`시공사진 ${i + 1}`}
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+        {photos.length > 0 && (
+          <div style={{ position: 'relative', background: '#EAE8E2', aspectRatio: '1' }}>
+            <img src={photos[photoIdx]} alt={`시공사진 ${photoIdx + 1}`}
+              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+
+            {photoIdx > 0 && (
+              <button onClick={() => setPhotoIdx(p => p - 1)}
+                style={{ position: 'absolute', left: 10, top: '50%', transform: 'translateY(-50%)',
+                  background: 'rgba(0,0,0,0.4)', border: 'none', color: '#fff',
+                  borderRadius: '50%', width: 32, height: 32, cursor: 'pointer', fontSize: '1.1rem' }}>‹</button>
+            )}
+            {photoIdx < photos.length - 1 && (
+              <button onClick={() => setPhotoIdx(p => p + 1)}
+                style={{ position: 'absolute', right: 10, top: '50%', transform: 'translateY(-50%)',
+                  background: 'rgba(0,0,0,0.4)', border: 'none', color: '#fff',
+                  borderRadius: '50%', width: 32, height: 32, cursor: 'pointer', fontSize: '1.1rem' }}>›</button>
+            )}
+
+            {/* 도트 */}
+            {photos.length > 1 && (
+              <div style={{ position: 'absolute', bottom: 10, left: '50%', transform: 'translateX(-50%)',
+                display: 'flex', gap: 5 }}>
+                {photos.map((_, i) => (
+                  <div key={i} onClick={() => setPhotoIdx(i)} style={{
+                    width: i === photoIdx ? 16 : 6, height: 6, borderRadius: 3,
+                    background: i === photoIdx ? '#fff' : 'rgba(255,255,255,0.5)',
+                    cursor: 'pointer', transition: 'all 0.2s',
+                  }} />
+                ))}
               </div>
-            ))}
+            )}
           </div>
         )}
 
@@ -97,8 +117,8 @@ function ReviewModal({ item, onClose }) {
 
 // ── 리뷰 카드 ─────────────────────────────────────────────────
 function ReviewCard({ item, onClick }) {
-  const [photoIdx, setPhotoIdx] = useState(0)
-  const photos = item.photos || []
+  const thumbUrl   = item.photos?.[0]
+  const extraCount = (item.photos?.length || 0) - 1
 
   return (
     <div
@@ -123,38 +143,22 @@ function ReviewCard({ item, onClick }) {
     >
       {/* 사진 */}
       <div style={{ height: 150, flexShrink: 0, position: 'relative', background: '#EAE8E2', overflow: 'hidden' }}>
-      {photos.length > 0 ? (
-        <img src={photos[photoIdx]} alt="시공사진"
-          style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
-      ) : (
-        <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <span style={{ fontSize: '2rem', opacity: 0.2 }}>🔨</span>
-        </div>
-      )}
-
-      {photoIdx > 0 && (
-        <button onClick={e => { e.stopPropagation(); setPhotoIdx(p => p - 1) }}
-          style={{ position: 'absolute', left: 6, top: '50%', transform: 'translateY(-50%)',
-            background: 'rgba(0,0,0,0.35)', border: 'none', color: '#fff',
-            borderRadius: '50%', width: 26, height: 26, cursor: 'pointer', fontSize: '1rem' }}>‹</button>
-      )}
-      {photoIdx < photos.length - 1 && (
-        <button onClick={e => { e.stopPropagation(); setPhotoIdx(p => p + 1) }}
-          style={{ position: 'absolute', right: 6, top: '50%', transform: 'translateY(-50%)',
-            background: 'rgba(0,0,0,0.35)', border: 'none', color: '#fff',
-            borderRadius: '50%', width: 26, height: 26, cursor: 'pointer', fontSize: '1rem' }}>›</button>
-      )}
-      {photos.length > 1 && (
-        <div style={{ position: 'absolute', bottom: 6, left: '50%', transform: 'translateX(-50%)', display: 'flex', gap: 4 }}>
-          {photos.map((_, i) => (
-            <div key={i} style={{
-              width: i === photoIdx ? 14 : 5, height: 5, borderRadius: 3,
-              background: i === photoIdx ? '#fff' : 'rgba(255,255,255,0.5)',
-              transition: 'all 0.2s',
-            }} />
-          ))}
-        </div>
-      )}
+        {thumbUrl ? (
+          <img src={thumbUrl} alt="시공사진"
+            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+        ) : (
+          <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <span style={{ fontSize: '2rem', opacity: 0.2 }}>🔨</span>
+          </div>
+        )}
+        {extraCount > 0 && (
+          <span style={{
+            position: 'absolute', bottom: 8, right: 8,
+            background: 'rgba(0,0,0,0.5)', color: '#fff',
+            fontSize: '0.68rem', fontWeight: 700,
+            padding: '3px 7px', borderRadius: 4, fontFamily: font,
+          }}>+{extraCount}장</span>
+        )}
         {/* 안심케어 인증 뱃지 */}
         <span style={{
           position: 'absolute', top: 8, left: 8,
