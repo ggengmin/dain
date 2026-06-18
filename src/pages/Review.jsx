@@ -97,8 +97,8 @@ function ReviewModal({ item, onClose }) {
 
 // ── 리뷰 카드 ─────────────────────────────────────────────────
 function ReviewCard({ item, onClick }) {
-  const thumbUrl   = item.photos?.[0]
-  const extraCount = (item.photos?.length || 0) - 1
+  const [photoIdx, setPhotoIdx] = useState(0)
+  const photos = item.photos || []
 
   return (
     <div
@@ -123,22 +123,38 @@ function ReviewCard({ item, onClick }) {
     >
       {/* 사진 */}
       <div style={{ height: 150, flexShrink: 0, position: 'relative', background: '#EAE8E2', overflow: 'hidden' }}>
-        {thumbUrl ? (
-          <img src={thumbUrl} alt="시공사진"
-            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
-        ) : (
-          <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <span style={{ fontSize: '2rem', opacity: 0.2 }}>🔨</span>
-          </div>
-        )}
-        {extraCount > 0 && (
-          <span style={{
-            position: 'absolute', bottom: 8, right: 8,
-            background: 'rgba(0,0,0,0.5)', color: '#fff',
-            fontSize: '0.68rem', fontWeight: 700,
-            padding: '3px 7px', borderRadius: 4, fontFamily: font,
-          }}>+{extraCount}장</span>
-        )}
+      {photos.length > 0 ? (
+        <img src={photos[photoIdx]} alt="시공사진"
+          style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+      ) : (
+        <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <span style={{ fontSize: '2rem', opacity: 0.2 }}>🔨</span>
+        </div>
+      )}
+
+      {photoIdx > 0 && (
+        <button onClick={e => { e.stopPropagation(); setPhotoIdx(p => p - 1) }}
+          style={{ position: 'absolute', left: 6, top: '50%', transform: 'translateY(-50%)',
+            background: 'rgba(0,0,0,0.35)', border: 'none', color: '#fff',
+            borderRadius: '50%', width: 26, height: 26, cursor: 'pointer', fontSize: '1rem' }}>‹</button>
+      )}
+      {photoIdx < photos.length - 1 && (
+        <button onClick={e => { e.stopPropagation(); setPhotoIdx(p => p + 1) }}
+          style={{ position: 'absolute', right: 6, top: '50%', transform: 'translateY(-50%)',
+            background: 'rgba(0,0,0,0.35)', border: 'none', color: '#fff',
+            borderRadius: '50%', width: 26, height: 26, cursor: 'pointer', fontSize: '1rem' }}>›</button>
+      )}
+      {photos.length > 1 && (
+        <div style={{ position: 'absolute', bottom: 6, left: '50%', transform: 'translateX(-50%)', display: 'flex', gap: 4 }}>
+          {photos.map((_, i) => (
+            <div key={i} style={{
+              width: i === photoIdx ? 14 : 5, height: 5, borderRadius: 3,
+              background: i === photoIdx ? '#fff' : 'rgba(255,255,255,0.5)',
+              transition: 'all 0.2s',
+            }} />
+          ))}
+        </div>
+      )}
         {/* 안심케어 인증 뱃지 */}
         <span style={{
           position: 'absolute', top: 8, left: 8,
