@@ -69,7 +69,7 @@ export const partnerList = [
     owner: '범권후',
     career: '경력 14년',
     area: '부산·경남',
-    quote: '14년간 단 한 번도 현장을 대충 마친 적 없습니다',
+    quote: '수직 수평 오차없이 완벽시공',
     path: '/partners/daesung',
     image: 'daesung_after.jpg',
     available: true,
