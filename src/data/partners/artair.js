@@ -4,7 +4,7 @@
 export const artair = {
   // ── 기본 정보 ──────────────────────────────────────
   id: 'artair',
-  category: '에어컨 설치',
+  category: '에어컨 설치 및 수리',
   categoryLabel: 'Premium Air Conditioning Expert',
   name: '아트에어',
   owner: '문병국',

@@ -87,8 +87,8 @@ const problems = [
   },
   {
     emoji: '❄️',
-    area: '에어컨 신규·이전 설치',
-    text: '신규 에어컨 설치, 이전 설치, 배관 연장이 필요할 때',
+    area: '에어컨 설치 및 수리',
+    text: '신규 에어컨 설치, 이전 설치, 수리가 필요할 때',
     solution: '처음부터 제대로, 에어컨 설치',
     path: '/partners/artair',
     expert: '아트에어 문병국',

@@ -52,7 +52,7 @@ export const partnerList = [
   },
   {
     id: 'artair',
-    category: '에어컨 설치',
+    category: '에어컨 설치 및 수리',
     name: '아트에어',
     owner: '문병국',
     career: 'LG SI 우수설치자',

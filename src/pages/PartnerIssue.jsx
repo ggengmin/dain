@@ -26,7 +26,7 @@ export default function PartnerIssue() {
 
   // 사진 선택
   const handlePhotoChange = (e) => {
-    const files = Array.from(e.target.files).slice(0, 3) // 최대 2장
+    const files = Array.from(e.target.files).slice(0, 5) // 최대 5장
     setPhotos(files)
     setPreviews(files.map((f) => URL.createObjectURL(f)))
   }
@@ -145,7 +145,7 @@ export default function PartnerIssue() {
                 시공 완료 사진 <span style={{ color: RED }}>*</span>
               </label>
               <p style={{ fontSize: '0.75rem', color: '#aaa', marginBottom: 10, fontFamily: font }}>
-                여러 장 선택 시 최대 3장까지 한번에 첨부할 수 있어요.
+                여러 장 선택 시 최대 5장까지 한번에 첨부할 수 있어요.
               </p>
 
               <div
