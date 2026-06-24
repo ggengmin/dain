@@ -8,6 +8,7 @@ export default function CareCertificate({ data }) {
     partnerName = '',
     ownerName   = '',
     carePeriod  = '시공 완료일로부터 1년',
+    careDescription = '',
     date,
   } = data
 
