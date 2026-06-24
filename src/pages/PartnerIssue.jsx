@@ -60,6 +60,7 @@ export default function PartnerIssue() {
         partnerName,
         ownerName: config.ownerName ?? '',
         carePeriod:   config.carePeriod,
+        careDescription: config.careDescription ?? '',  // ← 추가
         careType:     config.careType,
         photos:       photoUrls,
         date:         Timestamp.now(),
