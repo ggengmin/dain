@@ -27,7 +27,7 @@ export const careConfig = {
     // 특이사항 없음
   },
   '에어컨설치': {
-    category:        '에어컨설치',
+    category:        '에어컨 설치 및 수리',
     partner:         '아트에어',
     ownerName:       '문병국',
     carePeriod:      '시공 완료일로부터 2년',
