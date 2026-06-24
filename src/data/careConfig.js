@@ -26,7 +26,7 @@ export const careConfig = {
     careType:   'period',
     // 특이사항 없음
   },
-  '에어컨설치': {
+  '에어컨설치 및 수리': {
     category:        '에어컨 설치 및 수리',
     partner:         '아트에어',
     ownerName:       '문병국',
