@@ -453,8 +453,80 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 협력사 */}
+      <section style={{
+        background: BG,
+        padding: '60px 20px',
+        borderBottom: '1px solid #f0ebe4',
+        textAlign: 'center',
+      }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <h2 style={{ fontSize: '1.4rem', fontWeight: 700, marginBottom: 10 }}>
+            다인과 함께하는 파트너사
+          </h2>
+          <p style={{ color: '#888', fontSize: '0.9rem', marginBottom: 40 }}>
+            현장에서 신뢰로 이어진 인연들입니다.<br/>다인의 전문가들과 함께 일하는 협력사들을 소개합니다
+          </p>
+          <div style={{
+            display: 'flex',
+            gap: 32,
+            justifyContent: 'center',
+            alignItems: 'center',
+            flexWrap: 'wrap',
+          }}>
+            {[
+              { name: '모노우드디자인', logo: '/partner_monowood.png' },
+              { name: '카이저 인테리어', logo: '/partner_kaiser.png' },
+              { name: '윤슬조명 인테리어', logo: '/partner_yoonseol.png' },
+              { name: '강철에어클린', logo: '/partner_kangcheol.png' },
+              { name: '디앤디인테리어', logo: null },
+            ].map((company) => (
+              <div key={company.name} style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: 10,
+                width: 120,
+              }}>
+                {company.logo ? (
+                  <img src={company.logo} alt={company.name} style={{
+                    width: 72,
+                    height: 72,
+                    objectFit: 'contain',
+                    filter: 'grayscale(30%)',
+                  }} />
+                ) : (
+                  <div style={{
+                    width: 72,
+                    height: 72,
+                    borderRadius: 8,
+                    background: '#8c1d1d',
+                    color: '#fff',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '1rem',
+                    fontWeight: 700,
+                    letterSpacing: '1px',
+                  }}>
+                    D&D
+                  </div>
+                )}
+                <span style={{
+                  fontSize: '0.78rem',
+                  color: '#666',
+                  textAlign: 'center',
+                  lineHeight: 1.4,
+                }}>
+                  {company.name}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       {/* ── 6. BENEFIT EVENT ── */}
-      <section style={{ padding: '48px 20px' }}>
+      <section style={{ padding: '48px 20px', background: WHITE }}>
         <div style={{ maxWidth: 640, margin: '0 auto' }}>
           <div style={{
             background: RED, borderRadius: 20,
