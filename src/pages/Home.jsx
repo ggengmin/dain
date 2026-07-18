@@ -223,9 +223,9 @@ export default function Home() {
         }} />
         <div style={{ position: 'relative', zIndex: 1, maxWidth: 680, margin: '0 auto', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <img src="/logo.png" alt="다인" style={{ height: 100, objectFit: 'contain', marginBottom: 28 }} />
-          <p style={{ color: RED, fontWeight: 700, letterSpacing: '0.2em', fontSize: '0.72rem', textTransform: 'uppercase', marginBottom: 14 }}>
+          {/* <p style={{ color: RED, fontWeight: 700, letterSpacing: '0.2em', fontSize: '0.72rem', textTransform: 'uppercase', marginBottom: 14 }}>
             Verified Experts
-          </p>
+          </p> */}
           <h1 style={{
             fontSize: 'clamp(1.8rem, 6vw, 2.8rem)', fontWeight: 800,
             lineHeight: 1.5, color: '#111', marginBottom: 20,
