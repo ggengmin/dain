@@ -480,6 +480,8 @@ export default function Home() {
               { name: '윤슬조명 인테리어', logo: '/partner_yoonseol.png' },
               { name: '강철에어클린', logo: '/partner_kangcheol.png' },
               { name: '디앤디인테리어', logo: null },
+              { name: '바른정인테리어', logo: '/partner_bareunjung.png' },
+              // { name: '라뜰리에인테리어', logo: null },
             ].map((company) => (
               <div key={company.name} style={{
                 display: 'flex',
