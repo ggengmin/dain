@@ -3,7 +3,7 @@
 export const simyoungjae = {
   id: 'simyoungjae',
   category: '탄성코트',
-  categoryLabel: 'Premium Elastic Coat Expert',
+  categoryLabel: '다인 탄성코트 전문가',
   name: '심영재 하우징',
   owner: '심영재',
   career: '',

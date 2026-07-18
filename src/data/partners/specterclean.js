@@ -5,7 +5,7 @@ export const specterclean = {
   // ── 기본 정보 ──────────────────────────────────────
   id: 'specterclean',
   category: '입주청소',
-  categoryLabel: 'Professional Move-in Cleaning Expert',
+  categoryLabel: '다인 입주청소 전문가',
   name: '스펙터클린',
   owner: '공민재',           // 실명 확인 후 수정
   career: '다년간',        // 확인 후 수정

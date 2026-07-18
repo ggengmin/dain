@@ -5,7 +5,7 @@ export const daesung = {
   // ── 기본 정보 ──────────────────────────────────────
   id: 'daesung',
   category: '타일 시공',
-  categoryLabel: 'Professional Tile Construction Expert',
+  categoryLabel: '다인 타일 전문가',
   name: '대성타일',
   owner: '범권후',
   career: '14년',

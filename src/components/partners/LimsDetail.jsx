@@ -1,14 +1,15 @@
-// components/partners/NuvydesignDetail.jsx
-// 역할: 누비디자인(줄눈시공) 전용 상세 페이지 레이아웃
-// 구조: 설득카피 → Before/After → 프로필 → 인사말 → 약품비교표 → 번호공개
+// components/partners/LimsDetail.jsx
+// 구조: 설득카피+3원칙 → Before/After → 시공과정갤러리 → 프로필 → 인사말 → 번호공개
 
 import PartnerProfileSection from './PartnerProfileSection'
 import ContactSection from './ContactSection'
+import GallerySlider from './GallerySlider'
 
-const RED  = '#A8232A'
-const BG   = '#F5F4F0'
+const RED = '#A8232A'
+const BG  = '#F5F4F0'
+const font = "'Pretendard', -apple-system, sans-serif"
 
-export default function NuvydesignDetail({ data }) {
+export default function LimsDetail({ data }) {
   return (
     <div style={{ maxWidth: 780, margin: '0 auto', padding: '0 0 60px' }}>
 
@@ -20,7 +21,7 @@ export default function NuvydesignDetail({ data }) {
         <h2 style={{
           fontSize: 'clamp(1.2rem, 3vw, 1.7rem)',
           fontWeight: 800, letterSpacing: '-0.02em',
-          lineHeight: 1.5, color: '#111', whiteSpace: 'pre-line',
+          lineHeight: 1.55, color: '#111', whiteSpace: 'pre-line',
         }}>
           {data.reason.title}
         </h2>
@@ -38,17 +39,39 @@ export default function NuvydesignDetail({ data }) {
             wordBreak: 'keep-all',
           }}>{p}</p>
         ))}
+
+        {/* 하이라이트 */}
         <div style={{
           background: BG, borderLeft: `4px solid ${RED}`,
-          padding: '18px 20px', borderRadius: '0 16px 16px 0', marginTop: 24,
+          padding: '18px 20px', borderRadius: '0 16px 16px 0',
+          marginTop: 24, marginBottom: 24,
         }}>
           <div style={{ fontSize: '0.9rem', fontWeight: 800, color: RED, marginBottom: 6 }}>
             {data.reason.highlight.title}
           </div>
-          <p style={{ fontSize: '0.9rem', color: '#222', fontWeight: 600, lineHeight: 1.8, margin: 0 }}>
+          <p style={{ fontSize: '0.9rem', color: '#222', fontWeight: 600, lineHeight: 1.8, margin: 0, wordBreak: 'keep-all' }}>
             {data.reason.highlight.body}
           </p>
         </div>
+
+        {/* 3가지 원칙 */}
+        {data.reason.principles && (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+            {data.reason.principles.map((p, i) => (
+              <div key={i} style={{
+                display: 'flex', gap: 14, alignItems: 'flex-start',
+                background: BG, borderRadius: 12, padding: '16px 18px',
+                border: '1px solid rgba(34,34,34,0.05)',
+              }}>
+                <span style={{ fontSize: '1.4rem', flexShrink: 0 }}>{p.icon}</span>
+                <div>
+                  <p style={{ fontSize: '0.9rem', fontWeight: 800, color: '#111', marginBottom: 4 }}>{p.title}</p>
+                  <p style={{ fontSize: '0.82rem', color: '#666', lineHeight: 1.75, margin: 0, wordBreak: 'keep-all' }}>{p.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
 
       {/* ── 섹션2: Before & After ── */}
@@ -67,64 +90,45 @@ export default function NuvydesignDetail({ data }) {
         ))}
       </div>
 
-      {/* ── 섹션3: 프로필 (공통 컴포넌트) ── */}
+      {/* ── 섹션3: 시공 과정 갤러리 ── */}
+      {data.process && (
+        <div style={{
+          background: '#fff', borderRadius: 24, padding: '28px 24px',
+          border: '1px solid rgba(34,34,34,0.06)', margin: '36px 0',
+        }}>
+          <h3 style={{ fontSize: '1rem', fontWeight: 800, color: '#222', marginBottom: 8 }}>
+            🔧 {data.process.title}
+          </h3>
+          <p style={{
+            fontSize: '0.88rem', color: '#666', lineHeight: 1.75,
+            marginBottom: 20, wordBreak: 'keep-all',
+          }}>
+            {data.process.desc}
+          </p>
+          <GallerySlider images={data.process.gallery} />
+        </div>
+      )}
+
+      {/* ── 섹션4: 프로필 ── */}
       <PartnerProfileSection data={data} />
 
-      {/* ── 섹션4: 인사말 ── */}
+      {/* ── 섹션5: 인사말 ── */}
       <div style={{
         fontSize: '0.88rem', color: '#555', lineHeight: 1.95,
         whiteSpace: 'pre-line', background: '#FAFAFA',
         padding: '24px 28px', borderRadius: 16,
         border: '1px solid #EEE', marginBottom: 28,
       }}>
-        <strong style={{ display: 'block', marginBottom: 14 }}>{data.owner} 대표 인사말</strong>
+        <strong style={{ display: 'block', marginBottom: 14 }}>다인 공식 전문가 인사말</strong>
         {data.intro}
       </div>
 
-      {/* ── 섹션5: 약품 비교표 ── */}
-      <div style={{
-        background: '#fff', borderRadius: 24, padding: '28px 24px',
-        border: '1px solid rgba(34,34,34,0.06)', marginBottom: 28, overflowX: 'auto',
-      }}>
-        <div style={{ fontSize: '0.85rem', fontWeight: 800, marginBottom: 14 }}>
-          {data.materialTable.title}
-        </div>
-        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.78rem', minWidth: 440, textAlign: 'center' }}>
-          <thead>
-            <tr>
-              {data.materialTable.headers.map((h, i) => (
-                <th key={h} style={{
-                  padding: '10px 8px', fontWeight: 700, borderBottom: '2px solid #222',
-                  color: i === data.materialTable.recommendCol + 1 ? RED : '#222',
-                }}>{h}</th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {data.materialTable.rows.map((row) => (
-              <tr key={row.label}>
-                <td style={{ padding: '12px 8px', background: '#FAFAFA', color: '#666', fontWeight: 500, borderBottom: '1px solid #EEE' }}>
-                  {row.label}
-                </td>
-                {row.values.map((v, i) => (
-                  <td key={i} style={{
-                    padding: '12px 8px', borderBottom: '1px solid #EEE', fontWeight: 600,
-                    color: i === data.materialTable.recommendCol ? RED : '#333',
-                  }}>{v}</td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-
-      {/* ── 섹션6: 번호 공개 (공통 컴포넌트) ── */}
+      {/* ── 섹션6: 번호 공개 ── */}
       <ContactSection data={data} />
     </div>
   )
 }
 
-// Before/After 카드 서브컴포넌트
 function BeforeAfterCard({ src, label, labelColor, desc }) {
   return (
     <div style={{ background: '#fff', borderRadius: 16, overflow: 'hidden', border: '1px solid rgba(34,34,34,0.08)' }}>

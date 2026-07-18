@@ -36,7 +36,7 @@ export default function ContactSection({ data }) {
           <span style={{ color: RED, fontWeight: 800, fontSize: '0.82rem', display: 'block', marginBottom: 8 }}>
             🎁 다인 고객 전용 특전
           </span>
-          <p style={{ fontSize: '0.82rem', fontWeight: 500, color: '#444', lineHeight: 1.75, margin: 0 }}>
+          <p style={{ fontSize: '0.82rem', fontWeight: 500, color: '#444', lineHeight: 1.75, margin: 0,whiteSpace: 'pre-line'}}>
             {data.benefit}
           </p>
           <p style={{ fontSize: '0.72rem', color: '#aaa', marginTop: 10, margin: '10px 0 0' }}>

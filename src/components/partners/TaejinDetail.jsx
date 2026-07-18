@@ -80,7 +80,7 @@ export default function TaejinDetail({ data }) {
       {/* ── 섹션2: Before & After (실내 + 실외) ── */}
       <div style={{ margin: '36px 0' }}>
         <h3 style={{ fontSize: '1rem', fontWeight: 800, color: '#222', marginBottom: 20 }}>
-          📸 태진전기 리얼 현장 기록
+          📸 태진전기 현장 기록
         </h3>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
           {data.beforeAfter.map((set, i) => (

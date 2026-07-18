@@ -5,7 +5,7 @@ export const taejin = {
   // ── 기본 정보 ──────────────────────────────────────
   id: 'taejin',
   category: '전기공사',
-  categoryLabel: 'Professional Electrical Construction Expert',
+  categoryLabel: '다인 전기 전문가',
   name: '태진전기',
   owner: '홍태경·엄남동',
   career: '',

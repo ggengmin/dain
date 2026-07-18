@@ -4,7 +4,7 @@
 export const partnerList = [
   {
     id: 'nuvydesign',
-    category: '줄눈 시공',
+    category: '줄눈',
     name: '누비디자인',
     owner: '홍성빈',
     career: '경력 11년',
@@ -52,7 +52,7 @@ export const partnerList = [
   },
   {
     id: 'artair',
-    category: '에어컨 설치 및 수리',
+    category: '에어컨 설치·수리',
     name: '아트에어',
     owner: '문병국',
     career: 'LG SI 우수설치자',
@@ -64,7 +64,7 @@ export const partnerList = [
   },
   {
     id: 'daesung',
-    category: '타일 시공',
+    category: '타일',
     name: '대성타일',
     owner: '범권후',
     career: '경력 14년',
@@ -74,4 +74,16 @@ export const partnerList = [
     image: 'daesung_after.jpg',
     available: true,
   },
+  {
+  id: 'lims',
+  category: '도배·장판',
+  name: '임서방도배',
+  owner: '임종수',
+  career: '경력 5년',
+  area: '부산·경남',
+  quote: '좋은 도배는 벽지가 아닌, 보이지 않는 기초 작업에서 시작됩니다',
+  path: '/partners/lims',
+  image: 'gallery_lims_1.jpg',
+  available: true,
+},
 ]

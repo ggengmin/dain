@@ -5,7 +5,7 @@ export const nuvydesign = {
   // ── 기본 정보 ──────────────────────────────────────
   id: 'nuvydesign',
   category: '줄눈',
-  categoryLabel: 'Premium Tile Grout Expert',
+  categoryLabel: '다인 줄눈 전문가',
   name: '누비디자인',
   owner: '홍성빈',
   career: '11년',

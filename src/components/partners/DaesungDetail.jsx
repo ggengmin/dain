@@ -81,7 +81,7 @@ export default function DaesungDetail({ data }) {
       {/* ── 섹션2: 비포에프터 ── */}
     <div style={{ margin: '36px 0' }}>
     <h3 style={{ fontSize: '1rem', fontWeight: 800, color: '#222', marginBottom: 18 }}>
-        📸 {data.owner} 전문가의 리얼 현장 기록
+        📸 {data.owner} 전문가의 현장 기록
     </h3>
     {data.beforeAfter.map((set, i) => (
         <div key={i} style={{

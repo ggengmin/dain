@@ -12,6 +12,7 @@ import SimyoungjaeDetail  from '../components/partners/SimyoungjaeDetail'
 import TaejinDetail       from '../components/partners/TaejinDetail'
 import ArtairDetail       from '../components/partners/ArtairDetail'
 import DaesungDetail      from '../components/partners/DaesungDetail'
+import LimsDetail from '../components/partners/LimsDetail'
 
 import { nuvydesign }   from '../data/partners/nuvydesign'
 import { specterclean } from '../data/partners/specterclean'
@@ -19,6 +20,7 @@ import { simyoungjae }  from '../data/partners/simyoungjae'
 import { taejin }       from '../data/partners/taejin'
 import { artair }       from '../data/partners/artair'
 import { daesung }      from '../data/partners/daesung'
+import { lims }         from '../data/partners/lims'
 
 const partnerMap = {
   nuvydesign:   { Detail: NuvydesignDetail,   data: nuvydesign },
@@ -27,6 +29,7 @@ const partnerMap = {
   taejin:       { Detail: TaejinDetail,       data: taejin },
   artair:       { Detail: ArtairDetail,       data: artair },
   daesung:      { Detail: DaesungDetail,      data: daesung },
+  lims:         { Detail: LimsDetail,         data: lims },
 }
 
 const RED  = '#A8232A'

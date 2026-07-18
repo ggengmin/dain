@@ -5,7 +5,7 @@ export const artair = {
   // ── 기본 정보 ──────────────────────────────────────
   id: 'artair',
   category: '에어컨 설치 및 수리',
-  categoryLabel: 'Premium Air Conditioning Expert',
+  categoryLabel: '다인 에어컨 전문가',
   name: '아트에어',
   owner: '문병국',
   career: '',
@@ -66,7 +66,7 @@ export const artair = {
         desc: '배관 속 수분과 공기를 완전히 제거해야 냉방 효율이 정상적으로 나오고 컴프레서에 무리가 없습니다.',
       },
       {
-        icon: '🔍',
+        icon: '',
         title: '냉매 누설 정밀 검사',
         desc: '설치 직후 가스 밀봉 상태를 정밀 확인합니다. 미세한 누설도 전력 낭비와 성능 저하로 이어집니다.',
       },
