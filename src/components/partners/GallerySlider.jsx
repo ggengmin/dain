@@ -192,7 +192,7 @@ export default function GallerySlider({ images, title }) {
                   transition: 'opacity 0.2s',
                 }}
                   onMouseEnter={e => e.currentTarget.style.opacity = 1}
-                >🔍</span>
+                ></span>
               </div>
             </div>
           ))}

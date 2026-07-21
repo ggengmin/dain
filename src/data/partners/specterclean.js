@@ -97,8 +97,8 @@ export const specterclean = {
     title: '💰 청소 금액 안내',
     note: '평당 요금 기준 (실측 면적)',
     items: [
-      { label: '신축 청소', price: '12,000원/평' },
-      { label: '구축 청소', price: '13,000원/평' },
+      { label: '신축·구축 청소', price: '평당 15,000원 ~' },
+      // { label: '구축 청소', price: '13,000원/평' },
     ],
     caution: '추가 작업(외부유리, 특수청소 등)은 현장 확인 후 견적 안내드립니다.',
   },
