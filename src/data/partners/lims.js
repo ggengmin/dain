@@ -9,7 +9,7 @@ export const lims = {
   career: '5년',
   area: '부산 · 경남',
 
-  profileImage: '/profile_image_lims.png',
+  profileImage: '/profile_image_lims.jpg',
 
   stats: [
     { label: '시공 경력',   value: '5년' },
