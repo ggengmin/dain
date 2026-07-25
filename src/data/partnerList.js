@@ -86,4 +86,16 @@ export const partnerList = [
   image: 'gallery_lims_1.jpg',
   available: true,
 },
+{
+  id: 'present',
+  category: '인테리어 필름',
+  name: '지금인테리어필름',
+  owner: '이현재',
+  career: '경력 10년',
+  area: '부산',
+  quote: '교체 없이도, 새것 같은 공간을 만드는 것이 목표입니다',
+  path: '/partners/present',
+  image: 'present_after_1.jpg',
+  available: true,
+},
 ]
