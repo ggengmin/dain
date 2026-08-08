@@ -17,3 +17,10 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+/* 카카오톡 플로팅 */
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}

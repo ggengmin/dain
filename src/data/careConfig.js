@@ -57,5 +57,13 @@ export const careConfig = {
   carePeriod: '시공 완료일로부터 1년',
   careType:   'period',
   },
+  '인테리어 필름': {
+  category:        '인테리어 필름',
+  partner:         '지금인테리어필름',
+  ownerName:       '이현재',
+  carePeriod:      '시공 완료일로부터 1년',
+  careType:        'period',
+  careDescription: '습기로 인한 손상 또는 부주의로 인한 훼손은 유상 처리됩니다.',
+},
 }
 

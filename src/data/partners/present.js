@@ -14,7 +14,6 @@ export const present = {
   stats: [
     { label: '시공 기준',   value: '교체 없이 공간 변화' },
     { label: '시공 경력',   value: '10년' },
-
     { label: '거점 구역',   value: '부산' },
   ],
 
