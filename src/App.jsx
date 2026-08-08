@@ -27,6 +27,7 @@ function App() {
         target="_blank"
         rel="noreferrer"
         style={{
+          background: 'transparent', 
           position: 'fixed',
           bottom: 32,
           right: 32,
