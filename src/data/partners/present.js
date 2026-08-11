@@ -19,6 +19,7 @@ export const present = {
 
   links: [
     { label: '📸 인스타그램 시공 기록', url: 'https://www.instagram.com/preznt91' },
+    { label: '📝 네이버 공식 블로그 사례',  url: 'https://blog.naver.com/preznt91' },
   ],
 
   contact: '010-7466-1076',
