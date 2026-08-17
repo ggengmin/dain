@@ -10,14 +10,14 @@ export const careConfig = {
     careType:   'period',
     // 특이사항 없음
   },
-  '탄성코트': {
-    category:        '탄성코트',
-    partner:         '심영재 하우징',
-    ownerName:       '심영재',
-    carePeriod:      '시공 완료일로부터 2년',
-    careType:        'period',
-    careDescription: '소비자 부주의로 인한 하자는 입주 후 출장비가 발생합니다.',
-  },
+  // '탄성코트': {
+  //   category:        '탄성코트',
+  //   partner:         '심영재 하우징',
+  //   ownerName:       '심영재',
+  //   carePeriod:      '시공 완료일로부터 2년',
+  //   careType:        'period',
+  //   careDescription: '소비자 부주의로 인한 하자는 입주 후 출장비가 발생합니다.',
+  // },
   '전기공사': {
     category:   '전기공사',
     partner:    '태진전기',
@@ -34,14 +34,14 @@ export const careConfig = {
     careType:        'period',
     careDescription: '제품(기기) 관련 하자는 제조사 AS 규정을 따릅니다.',
   },
-  '타일 시공': {
-    category:        '타일 시공',
-    partner:         '대성타일',
-    ownerName:       '범권후',
-    carePeriod:      '시공 완료일로부터 1년',
-    careType:        'period',
-    careDescription: '소비자 부주의로 인한 타일 파손 시 추가금이 발생합니다.',
-  },
+  // '타일 시공': {
+  //   category:        '타일 시공',
+  //   partner:         '대성타일',
+  //   ownerName:       '범권후',
+  //   carePeriod:      '시공 완료일로부터 1년',
+  //   careType:        'period',
+  //   careDescription: '소비자 부주의로 인한 타일 파손 시 추가금이 발생합니다.',
+  // },
   '입주청소': {
     category:   '입주청소',
     partner:    '스펙터클린',

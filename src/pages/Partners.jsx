@@ -8,29 +8,29 @@ import { partnerList } from '../data/partnerList'
 
 import NuvydesignDetail   from '../components/partners/NuvydesignDetail'
 import SpectercleanDetail from '../components/partners/SpectercleanDetail'
-import SimyoungjaeDetail  from '../components/partners/SimyoungjaeDetail'
+// import SimyoungjaeDetail  from '../components/partners/SimyoungjaeDetail'
 import TaejinDetail       from '../components/partners/TaejinDetail'
 import ArtairDetail       from '../components/partners/ArtairDetail'
-import DaesungDetail      from '../components/partners/DaesungDetail'
+// import DaesungDetail      from '../components/partners/DaesungDetail'
 import LimsDetail from '../components/partners/LimsDetail'
 import PresentDetail from '../components/partners/PresentDetail'
 
 import { nuvydesign }   from '../data/partners/nuvydesign'
 import { specterclean } from '../data/partners/specterclean'
-import { simyoungjae }  from '../data/partners/simyoungjae'
+// import { simyoungjae }  from '../data/partners/simyoungjae'
 import { taejin }       from '../data/partners/taejin'
 import { artair }       from '../data/partners/artair'
-import { daesung }      from '../data/partners/daesung'
+// import { daesung }      from '../data/partners/daesung'
 import { lims }         from '../data/partners/lims'
 import { present } from '../data/partners/present'
 
 const partnerMap = {
   nuvydesign:   { Detail: NuvydesignDetail,   data: nuvydesign },
   specterclean: { Detail: SpectercleanDetail, data: specterclean },
-  simyoungjae:  { Detail: SimyoungjaeDetail,  data: simyoungjae },
+  // simyoungjae:  { Detail: SimyoungjaeDetail,  data: simyoungjae },
   taejin:       { Detail: TaejinDetail,       data: taejin },
   artair:       { Detail: ArtairDetail,       data: artair },
-  daesung:      { Detail: DaesungDetail,      data: daesung },
+  // daesung:      { Detail: DaesungDetail,      data: daesung },
   lims:         { Detail: LimsDetail,         data: lims },
   present:      { Detail: PresentDetail,      data: present},
 }
