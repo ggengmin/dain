@@ -98,4 +98,16 @@ export const partnerList = [
   image: 'present_after_1.jpg',
   available: true,
 },
+{
+  id: 'latelier',
+  category: '제작가구',
+  name: '라뜰리에 인테리어',
+  owner: '김웅우',
+  career: '경력 12년',
+  area: '부산·경남',
+  quote: '공간에 사람을 맞추는 것이 아니라, 사람에게 공간을 맞춥니다',
+  path: '/partners/latelier',
+  image: 'gallery_latelier_1.jpg',
+  available: true,
+},
 ]

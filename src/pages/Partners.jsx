@@ -14,6 +14,7 @@ import ArtairDetail       from '../components/partners/ArtairDetail'
 // import DaesungDetail      from '../components/partners/DaesungDetail'
 import LimsDetail from '../components/partners/LimsDetail'
 import PresentDetail from '../components/partners/PresentDetail'
+import LatelierDetail from '../components/partners/LatelierDetail'
 
 import { nuvydesign }   from '../data/partners/nuvydesign'
 import { specterclean } from '../data/partners/specterclean'
@@ -23,6 +24,7 @@ import { artair }       from '../data/partners/artair'
 // import { daesung }      from '../data/partners/daesung'
 import { lims }         from '../data/partners/lims'
 import { present } from '../data/partners/present'
+import { latelier } from '../data/partners/latelier'
 
 const partnerMap = {
   nuvydesign:   { Detail: NuvydesignDetail,   data: nuvydesign },
@@ -33,6 +35,7 @@ const partnerMap = {
   // daesung:      { Detail: DaesungDetail,      data: daesung },
   lims:         { Detail: LimsDetail,         data: lims },
   present:      { Detail: PresentDetail,      data: present},
+  latelier: { Detail: LatelierDetail, data: latelier },
 }
 
 const RED  = '#A8232A'

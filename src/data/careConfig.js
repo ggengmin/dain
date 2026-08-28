@@ -65,5 +65,13 @@ export const careConfig = {
   careType:        'period',
   careDescription: '습기로 인한 손상 또는 부주의로 인한 훼손은 유상 처리됩니다.',
 },
+  '제작가구': {
+    category:        '제작가구',
+    partner:         '라뜰리에 인테리어',
+    ownerName:       '김웅우',
+    carePeriod:      '시공 완료일로부터 1년',
+    careType:        'period',
+    careDescription: '고객 부주의로 인한 사항은 유상 처리됩니다.',
+  },
 }
 
