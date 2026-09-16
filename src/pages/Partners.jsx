@@ -10,8 +10,8 @@ import NuvydesignDetail   from '../components/partners/NuvydesignDetail'
 import SpectercleanDetail from '../components/partners/SpectercleanDetail'
 // import SimyoungjaeDetail  from '../components/partners/SimyoungjaeDetail'
 import TaejinDetail       from '../components/partners/TaejinDetail'
-import ArtairDetail       from '../components/partners/ArtairDetail'
-// import DaesungDetail      from '../components/partners/DaesungDetail'
+// import ArtairDetail       from '../components/partners/ArtairDetail'
+import SaerobDetail      from '../components/partners/SaerobDetail'
 import LimsDetail from '../components/partners/LimsDetail'
 import PresentDetail from '../components/partners/PresentDetail'
 import LatelierDetail from '../components/partners/LatelierDetail'
@@ -20,8 +20,8 @@ import { nuvydesign }   from '../data/partners/nuvydesign'
 import { specterclean } from '../data/partners/specterclean'
 // import { simyoungjae }  from '../data/partners/simyoungjae'
 import { taejin }       from '../data/partners/taejin'
-import { artair }       from '../data/partners/artair'
-// import { daesung }      from '../data/partners/daesung'
+// import { artair }       from '../data/partners/artair'
+import { saerob }      from '../data/partners/saerob'
 import { lims }         from '../data/partners/lims'
 import { present } from '../data/partners/present'
 import { latelier } from '../data/partners/latelier'
@@ -31,8 +31,8 @@ const partnerMap = {
   specterclean: { Detail: SpectercleanDetail, data: specterclean },
   // simyoungjae:  { Detail: SimyoungjaeDetail,  data: simyoungjae },
   taejin:       { Detail: TaejinDetail,       data: taejin },
-  artair:       { Detail: ArtairDetail,       data: artair },
-  // daesung:      { Detail: DaesungDetail,      data: daesung },
+  // artair:       { Detail: ArtairDetail,       data: artair },
+  saerob:      { Detail: SaerobDetail,      data: saerob },
   lims:         { Detail: LimsDetail,         data: lims },
   present:      { Detail: PresentDetail,      data: present},
   latelier: { Detail: LatelierDetail, data: latelier },

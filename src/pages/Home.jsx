@@ -83,16 +83,16 @@ const problems = [
     text: '낡고 색바랜 싱크대나 문, 가구를 새것처럼 바꾸고 싶을 때',
     solution: '철거 없이 깔끔하게 분위기 전환, 인테리어 필름',
     path: '/partners/present',
-    expert: '인테리어 필름 전문가',
+    expert: '지금인테리어필름 이현재',
   },
   {
-    emoji: '❄️',
-    area: '에어컨 설치 및 수리',
-    text: '신규 에어컨 설치, 이전 설치, 수리가 필요할 때',
-    solution: '처음부터 제대로, 에어컨 설치',
-    path: '/partners/artair',
-    expert: '아트에어 문병국',
-  },
+    emoji: '🪟',
+    area: '타일이 붙는 곳 어디든',
+    text: '오래된 타일이 지저분하고 낡아 보이는데, 전체 교체 없이 깔끔하게 바꾸고 싶을 때',
+    solution: '꼼꼼한 마감으로 공간을 새롭게, 타일 시공',
+    path: '/partners/saerob',
+    expert: '새롭 스튜디오 박우용',
+  }
 ]
 
 const benefits = [
