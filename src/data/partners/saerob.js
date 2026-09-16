@@ -27,7 +27,7 @@ export const saerob = {
 
   // ── [섹션1] 설득 카피 ─────────────────────────────
   reason: {
-    title: '"타일은 한 번 굳으면\n다시 하기 어렵습니다.\n처음부터 꼼꼼하게 해야 하는 이유입니다."',
+    title: '타일은 한 번 굳으면\n다시 하기 어렵습니다.\n처음부터 꼼꼼하게 해야 하는 이유입니다.',
     body: [
       '타일은 한 번 시공하면 되돌리기 어려운 인테리어의 바탕입니다. 시공 후 들뜨거나 단차가 생기면 미관상 불편할 뿐만 아니라 실생활에서도 지속적인 불편함으로 이어집니다.',
       '작은 부분 하나도 놓치지 않는 꼼꼼한 시공과 깔끔한 마감이 오래도록 만족스러운 공간을 만듭니다. 고객님의 공간에 어울리는 타일 선택부터 완성까지, 처음부터 끝까지 책임감을 갖고 진행합니다.',
@@ -58,10 +58,10 @@ export const saerob = {
   // ── [섹션2] Before & After ────────────────────────
   beforeAfter: [
     {
-      before:     '/saerob_before.jpg',
-      after:      '/saerob_after.jpg',
-      beforeDesc: 'Before - 시공 전',
-      afterDesc:  'After - 깔끔하게 완성된 타일 시공',
+      before:     '/saerob_before.png',
+      after:      '/saerob_after.png',
+      beforeDesc: 'Before - 오래된 베란다 타일',
+      afterDesc:  'After - 새롭고 깔끔하게 베란다',
     },
   ],
 
